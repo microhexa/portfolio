@@ -1,9 +1,27 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: left;
     margin: 0;
+}
+
+body > section,
+body > main {
     min-height: 100vh;
+    min-height: 100svh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .corner {
@@ -16,8 +34,12 @@ body {
     z-index: 1;
 }
 
+#intro {
+    position: relative;
+}
+
 #hero-message {
-    position: fixed;
+    position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
@@ -45,31 +67,126 @@ body {
     line-height: 1;
 }
 
-#upper-left {
-    top: 0;
-    left: 0;
-}
-
-#lower-left {
-    bottom: 0;
-    left: 0;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-}
-
-#upper-right {
-    top: 0;
-    right: 0;
-}
-
-#upper-right > div {
+#portfolio-start {
+    padding: 80px 20px;
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+#contact-section {
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.portfolio-segment {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 0;
+}
+
+.portfolio-segment h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+#contact-card {
+    width: min(720px, 100%);
+    padding: 40px;
+    border-radius: 32px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact-card h2 {
+    margin: 24px 0 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+#contact-details {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#contact-icons,
+#contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+#contact-status {
+    width: fit-content;
+    background-color: #f4f4f4;
     padding: 10px 15px;
     border-radius: 20px;
     font-weight: bold;
     display: flex;
     align-items: center;
+}
+
+#upper-middle {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    gap: 12px;
+}
+
+#upper-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#upper-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#language-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 999px;
+    background-color: #ffffff;
+}
+
+.language-option {
+    border: 0;
+    background-color: transparent;
+    color: #000000;
+    font: inherit;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.language-option.is-active {
+    background-color: #55e9c4;
+}
+
+#contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #status {
@@ -78,13 +195,6 @@ body {
     background-color: rgb(238, 214, 0);
     border-radius: 50%;
     margin-right: 10px;
-}
-
-#lower-left > div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
 }
 
 svg {
@@ -101,4 +211,14 @@ svg {
 #title {
     font-size: x-large;
     font-weight: bold;
+}
+
+@media (max-width: 640px) {
+    #contact-card {
+        padding: 28px 20px;
+    }
+
+    #contact-details {
+        gap: 14px;
+    }
 }
