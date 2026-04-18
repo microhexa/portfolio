@@ -8,6 +8,14 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="locked-section-title" data-i18n="portfolioDataAnalysis">Data analysis</div>
+    <nav id="page-nav" aria-label="Page navigation">
+        <a class="page-nav-link" href="#intro" data-nav-target="intro" data-i18n="navHome">Home</a>
+        <a class="page-nav-link" href="#portfolio-data-analysis-project-1" data-nav-target="data-analysis" data-i18n="portfolioDataAnalysis">Data analysis</a>
+        <a class="page-nav-link" href="#portfolio-machine-learning" data-nav-target="portfolio-machine-learning" data-i18n="portfolioMachineLearning">Machine learning</a>
+        <a class="page-nav-link" href="#portfolio-python" data-nav-target="portfolio-python" data-i18n="portfolioPython">Python</a>
+        <a class="page-nav-link" href="#contact-section" data-nav-target="contact-section" data-i18n="contactHeading">Contact</a>
+    </nav>
     <section id="intro">
         <div id="hero-message">
             <div id="hero-skills" data-i18n="heroSkills">Data analysis &bull; Machine learning &bull; Python</div>
@@ -26,10 +34,40 @@
         <div class="corner" id="upper-middle">
             <div id="name">Carrie Lovejoy</div>
         </div>
+        <div class="corner" id="lower-right">
+            This website was coded with AI assistance
+        </div>
     </section>
-    <section class="portfolio-panel" id="portfolio-data-analysis">
+    <section class="portfolio-panel" id="portfolio-data-analysis-project-1">
         <div class="portfolio-segment">
-            <h2 data-i18n="portfolioDataAnalysis">Data analysis</h2>
+            <div class="portfolio-case-study">
+                <div class="portfolio-kicker" data-i18n="dataVizKicker">Exam project - Data visualization</div>
+                <div class="portfolio-project-title" data-i18n="dataVizTitle">Equipment losses in the Ukraine-Russia War</div>
+                <p class="portfolio-summary" data-i18n="dataVizSummary">An exam project focused on turning a large conflict dataset into a clear multi-view visualization for comparing visually confirmed equipment losses over time.</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-label" data-i18n="dataVizDatasetLabel">Dataset</div>
+                        <p data-i18n="dataVizDatasetBody">Built from Oryx records, with dates extracted and validated, and additional fields added for equipment type, manufacturer, and supertype across more than 27,000 rows.</p>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-label" data-i18n="dataVizSolutionLabel">Visualization</div>
+                        <p data-i18n="dataVizSolutionBody">The final solution combined a mirrored area chart with a minimap, a detailed date-range view, and an icicle chart for hierarchical loss breakdowns.</p>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-label" data-i18n="dataVizDecisionsLabel">Design decisions</div>
+                        <p data-i18n="dataVizDecisionsBody">I used mirrored structure, shared scales, grounded gridlines, and an orange-blue palette to make asymmetry, magnitude, and adversarial comparison easier to read at a glance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio-panel" id="portfolio-data-analysis-project-2">
+        <div class="portfolio-segment">
+            <div class="portfolio-case-study">
+                <div class="portfolio-kicker" data-i18n="nextProjectKicker">Master's thesis</div>
+                <div class="portfolio-project-title" data-i18n="nextProjectTitle">Another data analysis case study coming here</div>
+                <p class="portfolio-summary" data-i18n="nextProjectSummary">Coming soon</p>
+            </div>
         </div>
     </section>
     <section class="portfolio-panel" id="portfolio-machine-learning">
