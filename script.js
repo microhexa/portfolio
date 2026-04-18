@@ -7,7 +7,9 @@ const translations = {
         heroSkills: "Data analysis • Machine learning • Python",
         heroScroll: "Scroll down to view my portfolio",
         contactButton: "Contact",
-        portfolioTitle: "Data analysis",
+        portfolioDataAnalysis: "Data analysis",
+        portfolioMachineLearning: "Machine learning",
+        portfolioPython: "Python",
         contactHeading: "Contact",
         availability: "Available for work from July 1st"
     },
@@ -15,7 +17,9 @@ const translations = {
         heroSkills: "Dataanalyse • Maskinlaering • Python",
         heroScroll: "Scroll ned for at se min portfolio",
         contactButton: "Kontakt",
-        portfolioTitle: "Dataanalyse",
+        portfolioDataAnalysis: "Dataanalyse",
+        portfolioMachineLearning: "Maskinlaering",
+        portfolioPython: "Python",
         contactHeading: "Kontakt",
         availability: "Ledig til arbejde fra 1. juli"
     }
@@ -103,6 +107,7 @@ window.addEventListener("load", () => {
     initializeLanguage();
     updateCurrentPanel();
 });
+
 window.addEventListener("resize", updateCurrentPanel);
 window.addEventListener("scroll", updateCurrentPanel, { passive: true });
 
