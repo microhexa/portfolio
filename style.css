@@ -24,6 +24,28 @@ body {
     flex-direction: row;
 }
 
+#upper-right {
+    top: 0;
+    right: 0;
+}
+
+#upper-right > div {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#status {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(238, 214, 0);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 #lower-left div {
     display: flex;
     flex-direction: column;
